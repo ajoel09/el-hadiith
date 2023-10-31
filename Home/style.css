@@ -1,0 +1,226 @@
+    @import url('../GlobalAssets/css/global.css');
+
+    .pattern {
+        height: 100%;
+        background-image: url("/GlobalAssets/imgd/background/main_background.png");
+        background-repeat: repeat;
+        background-position: top center;
+        background-size: contain;
+    }
+
+    .back_colour {
+        background-color: #d9d9d9 !important;
+    }
+
+    /* Carousel */
+    #carousel {
+        content: '';
+        /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1435224668334-0f82ec57b605?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 5em;
+        /* transform: scaleY(-1); */
+    }
+
+    .carousel {
+        overflow: hidden;
+    }
+
+    #carousel .row>div {
+        padding: 0;
+    }
+
+    #carousel h3 {
+        font-family: lato;
+        font-weight: 600;
+        margin: 20px auto 10px auto;
+        color: white;
+    }
+
+    #carousel .carousel-item {
+        /* padding: 15px; */
+        cursor: -webkit-grabbing;
+    }
+
+    #carousel .carousel-item img {
+        /* border-radius: 30px; */
+        height: 75vh;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
+        transition: 0.25s linear;
+    }
+
+    #carousel .carousel-item:hover img {
+        transform: translatey(-1%);
+    }
+
+    #carousel .carousel-indicators li {
+        display: inline-block;
+        width: 30px;
+        height: 10px;
+        margin: 1px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid rgba(0, 136, 169, 0.8);
+        border-radius: 10px;
+        margin: 2px;
+        position: relative;
+        top: 30px;
+    }
+
+    #carousel .carousel-indicators li.active {
+        background: #20665C;
+    }
+
+    @media only screen and (max-width: 650px) {
+        #carousel .carousel-item img {
+            height: auto;
+        }
+    }
+
+    #carousel .carousel-control-prev {
+        left: -50px;
+        margin: 0 -25px;
+    }
+
+    #carousel .carousel-control-next {
+        right: -50px;
+        margin: 0 -25px;
+    }
+
+    #carousel .custom-next-icon {
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='75' viewBox='0 0 22 75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.3859 35.8007C21.7828 36.8988 21.7828 38.1012 21.3859 39.1993L9.95239 70.8393C8.04902 76.1065 0.25 74.7406 0.25 69.1401L0.25 5.85994C0.25 0.259399 8.04902 -1.10653 9.95239 4.16066L21.3859 35.8007Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #carousel .custom-prev-icon {
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='75' viewBox='0 0 22 75' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.614053 39.1993C0.217241 38.1012 0.217242 36.8988 0.614054 35.8007L12.0476 4.16066C13.951 -1.10654 21.75 0.259377 21.75 5.85992L21.75 69.1401C21.75 74.7406 13.951 76.1065 12.0476 70.8393L0.614053 39.1993Z' fill='%23D9D9D9'/%3E%3C/svg%3E%0A");
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+    /* INI ADALAH STYLE MENU */
+    .grid_judul {
+        display: grid;
+        place-items: center;
+        color: #1E1E1E;
+        text-align: center;
+        font-family: cursive;
+        font-size: 1.5625rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        margin: 2.19rem;
+    }
+
+    .parent, .parent_kajian {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 45px;
+        margin-bottom: 4rem;
+    }
+
+    .parent>div, .parent_kajian>div {
+        border-radius: 0.625rem;
+        background: #20665C;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        width: 90%;
+        height: 4rem;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .parent {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 50px;
+            grid-row-gap: 75px;
+        }
+
+        .parent>div {
+            border-radius: 0.625rem;
+            background: #20665C;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            height: 7.44244rem;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .parent_kajian {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-column-gap: 50px;
+            grid-row-gap: 75px;
+        }
+
+        .parent_kajian>div {
+            border-radius: 0.625rem;
+            background: #20665C;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            height: 7.44244rem;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .judul_div_1 {
+            font-size: 0.5375rem;
+        }
+
+        .icon_menu>img {
+            width: 100%;
+        }
+    }
+
+    .judul_div_1 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: calc(100% + 10px);
+
+        /* Font */
+        color: #1E1E1E;
+        text-align: center;
+        font-family: cursive;
+        font-size: 0.9375rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .icon_menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        height: 100%;
+    }
+
+    .icon_menu>img {
+        height: 100%;
+    }
+
+    /* KITAB-KITAB */
+    .kitab {
+        background-color: #20665c75;
+    }
+
+    .kitab-item {
+        max-width: 8rem;
+        margin: 1.5rem;
+    }
+
+    .kitab-item>img {
+        max-width: 100%;
+        height: auto;
+    }
+
