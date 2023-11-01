@@ -50,6 +50,130 @@
 #sanad p.content {
     font-family: 'K2D', sans-serif;
     text-align: justify;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#sanad p.content-arab {
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    line-height: 1.85;
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#sanad li.content {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+#sanad .content-list-level-ul {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: upper-latin;
+    font-weight: bold;
+}
+
+#sanad .content-list-level-dec {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: decimal;
+}
+
+#sanad .content-list-level-decarab {
+    direction: rtl;
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: decimal;
+}
+
+#sanad .content-list-level-cir {
+    list-style-type: disc;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+#sanad .content-list-level-ll {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: lower-latin;
+    font-weight: bold;
+}
+
+#sanad .content-list-level-ll-normal {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    list-style-type: lower-latin;
+    font-weight: normal;
+}
+
+#sanad .nk {
+    counter-reset: item;
+}
+
+#sanad .content-list-level-nk {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: decimal;
+    font-weight: normal;
+    display: block;
+}
+
+#sanad .content-list-level-nk::before {
+    content: counter(item) ") ";
+    counter-increment: item;
+}
+
+
+
+.subtitle {
+    margin-left: calc((var(--bs-gutter-x) * -.5) - 1.5rem);
+    background-color: #2A6D63;
+    width: min-content;
+    color: white;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+#sanad a.subtitle:hover{
+    color: #2A6D63;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#sanad a.subtitle.active{
+    color: #2A6D63;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#sanad a.subtitle{
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .subtitle {
+        margin-left: calc((var(--bs-gutter-x) * -.5) - 3rem);
+    }
+    
+#sanad p.content {
+    font-family: 'K2D', sans-serif;
+    text-align: justify;
     font-size: 1.25rem;
     font-weight: normal;
 }
@@ -138,37 +262,9 @@
     content: counter(item) ") ";
     counter-increment: item;
 }
-
-.subtitle {
-    margin-left: calc((var(--bs-gutter-x) * -.5) - 1.5rem);
-    background-color: #2A6D63;
-    width: min-content;
-    color: white;
-    border-bottom-right-radius: 2rem;
-    border-top-right-radius: 2rem;
 }
 
-#sanad a.subtitle:hover{
-    color: #2A6D63;
-    background-color: white;
-    transition: 0.3s;
-}
 
-#sanad a.subtitle.active{
-    color: #2A6D63;
-    background-color: white;
-    transition: 0.3s;
-}
-
-#sanad a.subtitle{
-    font-weight: bold;
-}
-
-@media only screen and (min-width: 768px) {
-    .subtitle {
-        margin-left: calc((var(--bs-gutter-x) * -.5) - 3rem);
-    }
-}
 
 /* Circle Penunjuk Halaman */
 #indikator_halaman a {
