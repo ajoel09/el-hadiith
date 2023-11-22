@@ -1,0 +1,37 @@
+.parent {
+    display: grid;
+    grid-template-columns: 1fr; /* Initially one column for mobile */
+    gap: 20px;
+  }
+  
+  .parent>div {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    /* Media query for screens wider than 768px (desktop) */
+    .parent {
+      grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+    }
+  }
+  
+  ol {
+    counter-reset: item;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  li {
+    display: block;
+    margin-bottom: .5em;
+    margin-left: 2em;
+  }
+  li::before {
+    display: inline-block;
+    content: counter(item) ") ";
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+  }
